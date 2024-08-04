@@ -8,8 +8,8 @@ function populateBoard(size) {
     let amount = size * size;
     for (let i = 0; i < amount; i++) {
         let square = document.createElement('div');
-        square.addEventListener('mouseover', () => {square.style.backgroundColor = 'black'})
-        square.style.backgroundColor = 'blue';
+        square.addEventListener('mouseover', colorSqaure);
+        square.style.backgroundColor = 'white';
         board.insertAdjacentElement('beforeend', square);
     }
 }
@@ -21,4 +21,13 @@ function changeSize(input) {
     } else {
         console.log("Input not allowed!");
     }
+}
+
+function colorSqaure() {
+    let x = Math.floor(Math.random() * 256);
+    let y = Math.floor(Math.random() * 256);
+    let z = Math.floor(Math.random() * 256);
+    // Construct the RGB color string.
+    let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    this.style.backgroundColor = bgColor;
 }
