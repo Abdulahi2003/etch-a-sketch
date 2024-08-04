@@ -25,17 +25,13 @@ function changeSize(input) {
 }
 
 function colorSqaure() {
-    this.style.backgroundColor = color;
+    if (color === 'random') {
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } else {
+        this.style.backgroundColor = color;
+    }
 }
 
 function changeColor(choice) {
     color = choice;
-}
-
-function getRandomColor() {
-    let x = Math.floor(Math.random() * 256);
-    let y = Math.floor(Math.random() * 256);
-    let z = Math.floor(Math.random() * 256);
-    // Construct the RGB color string.
-    let bgColor = "rgb(" + x + "," + y + "," + z + ")";
 }
