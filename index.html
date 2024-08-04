@@ -11,6 +11,7 @@
 <body>
     <div class="flex-container"></div>
     <div class="title"><h1>SketchPad</h1></div>
+    <div class="mode">Mode: Coloring</div>
     <div class="content">
         <div class="board"></div>
         <div class="buttons">
@@ -18,7 +19,7 @@
             <button onclick="changeColor('gray')">Gray</button>
             <button onclick="changeColor('white')">Eraser</button>
             <button onclick="changeColor('random')">Random</button>
-            <button onclick="resetBoard('reset')">Reset</button>
+            <button onclick="resetBoard()">Reset</button>
         </div>
         <div>
             <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)">

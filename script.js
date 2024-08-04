@@ -17,10 +17,12 @@ function populateBoard(size) {
 populateBoard(16);
 
 function changeSize(input) {
-    if (input >=2 || input<=100) {
-        populateBoard(input);
-    } else {
-        console.log("Input not allowed!");
+    if (click) {
+        if (input >=2 && input<=100) {
+            populateBoard(input);
+        } else {
+            console.log("Input not allowed!");
+        }
     }
 }
 
@@ -42,3 +44,4 @@ function resetBoard() {
     squares.forEach((div) => div.remove()); 
     populateBoard(16); 
 }
+
