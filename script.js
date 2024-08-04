@@ -8,6 +8,7 @@ function populateBoard(size) {
     let amount = size * size;
     for (let i = 0; i < amount; i++) {
         let square = document.createElement('div');
+        square.addEventListener('mouseover', () => {square.style.backgroundColor = 'black'})
         square.style.backgroundColor = 'blue';
         board.insertAdjacentElement('beforeend', square);
     }
@@ -15,5 +16,9 @@ function populateBoard(size) {
 populateBoard(16);
 
 function changeSize(input) {
-    populateBoard(input);
+    if (input >=2 || input<=100) {
+        populateBoard(input);
+    } else {
+        console.log("Input not allowed!");
+    }
 }
