@@ -17,13 +17,13 @@ function populateBoard(size) {
 populateBoard(16);
 
 function changeSize(input) {
-    if (click) {
-        if (input >=2 && input<=100) {
-            populateBoard(input);
-        } else {
-            console.log("Input not allowed!");
-        }
+    if (input >=2 && input<=100) {
+        document.querySelector('.error').style.display = "none";
+        populateBoard(input);
+    } else {
+        document.querySelector('.error').style.display = "flex";
     }
+
 }
 
 function colorSqaure() {
